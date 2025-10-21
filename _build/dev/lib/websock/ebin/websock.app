@@ -1,5 +1,5 @@
 {application,websock,
-             [{config_mtime,1759861109},
+             [{config_mtime,1760980880},
               {optional_applications,[]},
               {applications,[kernel,stdlib,elixir]},
               {description,"A specification for WebSocket connections"},

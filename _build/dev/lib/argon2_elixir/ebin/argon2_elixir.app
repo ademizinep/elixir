@@ -1,5 +1,5 @@
 {application,argon2_elixir,
-             [{config_mtime,1760117050},
+             [{config_mtime,1760980880},
               {optional_applications,[]},
               {applications,[kernel,stdlib,elixir,logger,crypto,comeonin]},
               {description,"Argon2 password hashing algorithm for Elixir"},

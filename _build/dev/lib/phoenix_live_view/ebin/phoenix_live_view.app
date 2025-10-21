@@ -1,5 +1,5 @@
 {application,phoenix_live_view,
-    [{config_mtime,1759861109},
+    [{config_mtime,1760980880},
      {compile_env,
          [{phoenix_live_view,[enable_expensive_runtime_checks],error}]},
      {optional_applications,[igniter,phoenix_view,jason,lazy_html]},

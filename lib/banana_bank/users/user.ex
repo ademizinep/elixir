@@ -3,7 +3,8 @@ defmodule BananaBank.Users.User do
   import Ecto.Changeset
   alias Ecto.Changeset
 
-  @required_params [:name, :email, :password, :cep]
+  @required_params_create [:name, :email, :password, :cep]
+  @required_params_update [:name, :email, :cep]
 
   schema "users" do
     field :name, :string
@@ -15,15 +16,24 @@ defmodule BananaBank.Users.User do
     timestamps()
   end
 
-  def changeset(user \\ %__MODULE__{}, params) do
-    user
-    |> cast(params, @required_params)
-    |> validate_required(@required_params)
+  def changeset(params) do
+    %__MODULE__{}
+    |> cast(params, @required_params_create)
+    |> validate_required(@required_params_create)
     |> validate_length(:password, min: 6)
     |> validate_format(:email, ~r/@/)
     |> validate_length(:cep, is: 8)
     |> add_password_hash()
   end
+
+  def changeset(user, params) do
+    user
+    |> cast(params, @required_params_update)
+    |> validate_required(@required_params_update)
+    |> validate_format(:email, ~r/@/)
+    |> validate_length(:cep, is: 8)
+  end
+
 
   defp add_password_hash(%Changeset{valid?: true, changes: %{password: password}} = changeset) do
     change(changeset, Argon2.add_hash(password))

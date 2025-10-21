@@ -1,5 +1,5 @@
 {application,phoenix_html,
-             [{config_mtime,1759861109},
+             [{config_mtime,1760980880},
               {optional_applications,[]},
               {applications,[kernel,stdlib,elixir,eex,logger]},
               {description,"Phoenix view functions for working with HTML templates"},

@@ -1,5 +1,5 @@
 {application,postgrex,
-             [{config_mtime,1759861109},
+             [{config_mtime,1760980880},
               {optional_applications,[jason,table]},
               {applications,[kernel,stdlib,elixir,logger,crypto,ssl,jason,
                              table,decimal,db_connection]},

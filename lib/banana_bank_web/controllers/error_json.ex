@@ -25,6 +25,13 @@ defmodule BananaBankWeb.ErrorJSON do
     }
   end
 
+  def error(%{status: :not_found}) do
+    %{
+      status: :not_found,
+      message: "User not found"
+    }
+  end
+
   defp translate_error({msg, opts}) do
     Enum.reduce(opts, msg, fn {key, value}, acc ->
       String.replace(acc, "%{#{key}}", to_string(value))

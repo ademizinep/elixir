@@ -1,5 +1,5 @@
 {application,db_connection,
-             [{config_mtime,1759861109},
+             [{config_mtime,1760980880},
               {optional_applications,[]},
               {applications,[kernel,stdlib,elixir,logger,telemetry]},
               {description,"Database connection behaviour for database transactions and connection pooling\n"},

@@ -1,5 +1,5 @@
 {application,plug,
-             [{config_mtime,1759861109},
+             [{config_mtime,1760980880},
               {compile_env,[{plug,[mimes],error},{plug,[statuses],error}]},
               {optional_applications,[]},
               {applications,[kernel,stdlib,elixir,logger,eex,mime,plug_crypto,
