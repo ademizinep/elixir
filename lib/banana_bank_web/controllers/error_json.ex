@@ -32,6 +32,13 @@ defmodule BananaBankWeb.ErrorJSON do
     }
   end
 
+  def error(%{status: :unprocessable_entity, message: msg}) do
+    %{
+      status: :unprocessable_entity,
+      message: msg
+    }
+  end
+
   defp translate_error({msg, opts}) do
     Enum.reduce(opts, msg, fn {key, value}, acc ->
       String.replace(acc, "%{#{key}}", to_string(value))
