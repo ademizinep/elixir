@@ -9,7 +9,10 @@ defmodule BananaBankWeb.Router do
     pipe_through :api
 
     get "/welcome", WelcomeController, :index
+
     resources "/users", UsersController, only: [:create, :update, :delete, :show]
+    post "/users/login", UsersController, :login
+
     resources "/accounts", AccountsController, only: [:create]
     post "/accounts/transaction", AccountsController, :transaction
   end

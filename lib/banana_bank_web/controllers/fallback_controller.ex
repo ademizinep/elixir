@@ -1,6 +1,5 @@
 defmodule BananaBankWeb.FallbackController do
   use BananaBankWeb, :controller
-  alias Ecto.Changeset
 
   def call(conn, {:error, :not_found}) do
     conn
@@ -22,5 +21,4 @@ defmodule BananaBankWeb.FallbackController do
     |> put_view(BananaBankWeb.ErrorJSON)
     |> render(:error, status: :unprocessable_entity, message: msg)
   end
-
 end

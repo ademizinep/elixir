@@ -28,4 +28,11 @@ defmodule BananaBankWeb.UsersJSON do
   end
 
   def delete(_), do: %{message: "User deleted successfully"}
+
+  def login(%{token: token}) do
+    %{
+      message: "Login successful",
+      token: token
+    }
+  end
 end
